@@ -33,7 +33,7 @@
   <main class="clearfix">
     <section class="blog">
       <h2 class="blog-headline">Recent Blogs</h2>
-      <div><%= link_to "Post", new_blog_path, class:"post" %></div>
+      <div class="post-box"><%= link_to "Post", new_blog_path, class:"post" %></div>
       <div class="blog-box">
         <% @blogs.each do |blog| %>
           <div class="blog-item clearfix">
@@ -46,9 +46,9 @@
             </div>
           </div>
         <% end %>
-        <div class="pagination">
-      <%= paginate @blogs, class: "p" %>
-    </div>
+        <!-- <div class="pagination"> -->
+      <%= paginate @blogs %>
+    <!-- </div> -->
       </div>
     </section>
     <div class="sidebar">
